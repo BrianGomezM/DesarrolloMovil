@@ -1,0 +1,20 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Clase2" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.Clase2" parent="Base.Theme.Clase2" />
+
+    <!--Estilo para los chip-->
+    <style name="styleChip" parent="Widget.MaterialComponents.Chip.Entry">
+        <item name="android:textStyle"> bold</item>
+        <!--<item name="android:textColor">@color/white</item>-->
+        <item name="android:textColor">@drawable/chip_color_texto</item>
+        <item name="chipBackgroundColor">@color/blue</item>
+        <item name="chipStrokeColor">@color/gray</item>
+        <item name="chipStrokeWidth">2dp</item>
+
+    </style>
+</resources>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Clase2</string>
+    <string name="tv_titulo">Desarrollo Móvil</string>
+    <string name="tv_new_titulo">Desarrollo de Aplicaciones</string>
+
+    <string-array name="listaPaises">
+        <item>Albania</item>
+        <item>Alemania</item>
+        <item>Angola</item>
+        <item>Arabia Saudita</item>
+        <item>Argelia</item>
+    </string-array>
+</resources>

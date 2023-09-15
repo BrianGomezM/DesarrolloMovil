@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/llContenedor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <!-- Ejemplo TextView -->
+        <TextView
+            android:id="@+id/tvTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_titulo"
+            android:fontFamily="serif"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:padding="10dp" />
+
+        <!-- Ejemplo EditText -->
+        <EditText
+            android:id="@+id/etNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_gravity="center"
+            android:hint="Ingresa tu nombre"
+            android:background="@drawable/estilo_bg_redondo"
+            android:padding="12dp"
+            android:drawableStart="@drawable/icono_nombre"
+            android:drawablePadding="5dp"
+            android:inputType="text"
+            android:maxLength="10"/>
+
+        <!-- Ejemplo AutoCompleteTextView -->
+        <AutoCompleteTextView
+            android:id="@+id/atPais"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="12dp"
+            android:layout_gravity="center"
+            android:hint="Ingrese información"/>
+
+        <!-- Ejemplo Button -->
+        <Button
+            android:id="@+id/btn_iniciarSesion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:text="Iniciar sesión"
+            android:backgroundTint="@color/green"
+            android:textColor="@color/black" />
+
+        <!-- Ejemplo Personalizar Button -->
+        <android.widget.Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/estilo_bg_redondo"
+            android:backgroundTint="@color/blue"
+            android:drawableStart="@drawable/icono_nombre"
+            android:drawablePadding="5dp"
+            android:padding="8dp"
+            android:text="Iniciar sesión"
+            android:textColor="@color/white" />
+
+        <!-- Ejemplo imageButton -->
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:src="@drawable/ic_guardar"
+            android:background="@color/transparent"/>
+
+        <!-- Ejemplo ChipGroup y Chip personalizar usando style -->
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/cgLenguajes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="kotlin"
+                app:chipIcon="@drawable/ic_kotlin"
+                style="@style/styleChip"/>
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="java"
+                app:chipIcon="@drawable/ic_java"
+                style="@style/styleChip"/>
+
+            <com.google.android.material.chip.Chip
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="python"
+                style="@style/styleChip"/>
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <!-- Ejemplo RadioGroup y RadioButton -->
+        <RadioGroup
+            android:id="@+id/rgContenedor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rbAndroid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Android"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/rbiOs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="iOS" />
+
+        </RadioGroup>
+
+        <!-- Ejemplo Check CheckBox -->
+        <CheckBox
+            android:id="@+id/cb_opcion1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Opcion1"
+            android:checked="true" />
+
+        <CheckBox
+            android:id="@+id/cb_opcion2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Opcion2"
+            android:enabled="false" />
+
+        <!-- Ejemplo TogleButton -->
+        <ToggleButton
+            android:id="@+id/tb_opcion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOn="SI"
+            android:textOff="NO"
+            android:checked="true"/>
+
+        <!-- Ejemplo Switch -->
+        <Switch
+            android:id="@+id/swActivar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="activar"
+            android:thumbTint="@color/orange"
+            android:trackTint="@color/green"/>
+
+        <!-- Ejemplo floatActionButton desde la documentacion - con LinearLayout da error -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fbagregar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:src="@drawable/ic_add"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- Ejemplo floatActionButton usando una libreria externa-->
+<!--        <com.getbase.floatingactionbutton.AddFloatingActionButton-->
+<!--            android:id="@+id/float_btn"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content" />-->
+
+    </LinearLayout>
+</layout>
